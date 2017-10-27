@@ -3,16 +3,17 @@ node_js:
   - "0.12"
   - "5"
   - "6"
+  - "7"
 matrix:
   include:
     - node_js: "0.10"
       env:
         - TEST="all"
         - CXX=g++-4.8
-notifications:
-  email:
-    - jchan@linkedin.com
-    - skinast@linkedin.com
+#notifications:
+#  email:
+#    - jchan@linkedin.com
+#    - skinast@linkedin.com
 before_install:
   - npm install -g npm@3
 before_script:
@@ -29,3 +30,5 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+after_success:
+- coveralls < tmp/coverage/lcov/lcov.info
