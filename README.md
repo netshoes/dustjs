@@ -1,4 +1,4 @@
-# Dust.js [![Build Status](https://secure.travis-ci.org/linkedin/dustjs.png)](http://travis-ci.org/linkedin/dustjs) [![Sauce Test Status](https://saucelabs.com/buildstatus/dustjs)](https://saucelabs.com/u/dustjs)
+# Dust.js [![Build Status](https://travis-ci.org/netshoes/dustjs.svg?branch=master)](https://travis-ci.org/netshoes/dustjs) [![Coverage Status](https://coveralls.io/repos/github/netshoes/dustjs/badge.svg?branch=master)](https://coveralls.io/github/netshoes/dustjs?branch=master)
 
 Asynchronous Javascript templating for the browser and server. This fork is maintained by [LinkedIn](http://linkedin.github.io/).
 
@@ -25,6 +25,13 @@ If you want to add the [Dust helpers](https://github.com/linkedin/dustjs-helpers
 
 * Read [dustjs.com](http://www.dustjs.com/) for guides, tutorials, and documentation.
 * Check out the `examples/` directory in the repo for simple examples to help you get started using Dust in a variety of ways.
+
+## Flavor changes
+
+* Delayed Chunk API - Setting a Chunk to be rendered latest on Rendering phase.
+* Not related to promises
+* Non-compatible with Stream (yet).
+* Check [unit tests](https://github.com/netshoes/dustjs/blob/master/test/templates/all.js#L2608) to see it working.
 
 ## Contribute
 

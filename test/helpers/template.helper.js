@@ -24,6 +24,12 @@
     }
     return val;
   };
+  dust.helpers.delayed = function(chunk) {
+    return chunk.map(function(chk) {
+      chk.delayed = true;
+      chk.write('Delayed content');
+    });
+  };
   dust.filters.woo = function(string, context) {
     var wooLevel = parseInt(context.get('woo')) + 1;
     return string.toUpperCase() + new Array(wooLevel).join('!');
